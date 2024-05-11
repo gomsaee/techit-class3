@@ -1,0 +1,191 @@
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(/sr-only.css);
+
+:root{ 
+  font-size: 6.25%;
+}
+
+*,*::before,*::after{
+  margin:0;
+  padding:0;
+}
+
+a{
+  text-decoration: none;  
+  color: #000;
+}
+
+button{ 
+  background: transparent;
+  border: none;
+  cursor : pointer;}
+
+.menu-wrapper{
+  display: flex;
+  flex-direction:row nowrap;
+  justify-content:space-between;
+  height: 125rem;
+  align-items: center;
+  .logo{
+    width: 240rem;
+    height: 30rem;
+    padding-left: 40rem;
+   }
+}
+
+.menu-group{
+  display: flex;
+  flex-direction: row nowrap;
+  align-items: center;
+  line-height: 130rem;
+  height: 130rem;
+  
+   button{
+    list-style: none;
+    padding: 56rem 25rem;
+    font-size: 18rem;
+    font-weight: 700;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+
+  button:nth-child(n+8){
+    padding-left: 0;
+  }
+}
+
+.main-visual-group{
+  height: 664rem;
+  position: relative;
+  
+  .main-visual-img{
+    width: 100%;
+    height: 100%;
+    background-image: url(./imgs/KakaoTalk_Photo_2021-11-15-12-06-53.jpeg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column nowrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    .main-content{
+      color: #fff;
+      padding-bottom: 50rem;
+      
+      .main-title{
+        font-size: 72rem;
+        font-weight: 700;
+        font-family: "Montserrat","Noto Sans KR", sans-serif;
+      }
+      .sub-content{
+        font-size: 22rem;
+        font-weight: 400;
+        font-family: "Noto Sans KR", "Montserrat",sans-serif;
+        line-height: 1.65;
+        margin-top: 30rem;
+      }
+      .view-more{
+        color: #fff;
+        font-size:16rem;
+        font-weight: 700;
+        font-family: "Montserrat", "Noto Sans KR", sans-serif;
+        margin-top: 68rem;
+        border-bottom: 2rem solid white;
+        padding: 0 0 4rem;
+      }
+    }
+  }
+  span{
+    color: #fff;
+    font-size: 60rem;
+    opacity: 0.4;
+    font-weight: 200;
+    position: absolute;
+  }
+  .left-circle{
+    transform: rotate(180deg);
+    left: 60rem;
+  }
+  .right-circle{
+    right: 60rem;
+  }
+} 
+
+
+.main-news{
+  padding: 120rem 0 120rem;
+
+    
+  .move-button-container{
+    margin: 0 6.5%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    h2{
+      font-size: 48rem;
+      font-weight: 700;
+      line-height: 1.25;
+      font-family: "Noto Sans KR", "Montserrat",sans-serif;
+      letter-spacing: -2px;
+      }
+
+    span{
+    font-size: 22rem;
+    color: #ddd;
+  }
+  .move-button-group{
+    vertical-align:middle;
+  }
+}
+}
+
+.news-container{
+  margin-top: 60rem;
+  button{
+    margin: 0 auto;
+    width: 87%;
+    height: 113rem;
+    border: 3rem solid #000;
+    border-radius: 100rem;
+    padding-left:  80rem;
+    font-size: 20rem;
+    font-family: "Noto Sans KR", "Montserrat",sans-serif;
+    letter-spacing: -0.64px;
+    line-height: 1.4;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    .new-notice{
+      box-sizing: border-box;
+      width: 240rem;
+      height: 100%;
+      font-weight: 700;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+    .news-contents-wrapper{
+      font-weight: 400;
+      height: 100%;
+      padding-left: 40rem ;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+
+      .news-contents{
+        width: 760rem;
+        text-align: left;
+      }
+
+      span{
+        width: 100rem;
+      }
+    }
+    
+  }
+ 
+}
