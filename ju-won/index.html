@@ -11,36 +11,42 @@
 <body>
      <header>
         <h1><a href="#"><img src="./images/logo.svg" alt="풍림무약"></a></h1>
-        <nav>
-            <ul>
-                <li><a href="#">회사소개</a></li>
-                <li><a href="#">무역사업</a></li>
-                <li><a href="#">제약사업</a></li>
-                <li><a href="#">뉴스룸</a></li>
-                <li><a href="#">채용</a></li> 
-                <li><a href="#">문의</a></li>
-            </ul>
-        </nav>
+        <div role="group">
+            <nav>
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">무역사업</a></li>
+                    <li><a href="#">제약사업</a></li>
+                    <li><a href="#">뉴스룸</a></li>
+                    <li><a href="#">채용</a></li> 
+                    <li><a href="#">문의</a></li>
+                </ul>
+            </nav>
+            <button type="button"><span class="fa-solid fa-magnifying-glass"></span></button>
+            <span class="fa-solid fa-globe language"></span>
+        </div>
+           
+        </div>
      </header>
      <main>
         <section class="visual">
-            <img src="./images/main_visual.jpg" alt="">
+            <img src="./images/main-visual-01.jpg" alt="">
         </section>
-        <section class="news">
+        <section class="infomation">
             <div role="group" class="">
                 <h2>풍림무약은<br/>새롭게 나아갑니다.</h2>
-                <div>
-                    <button type="button">이전 글</button>
+                <div class="pageing-wrap">
+                    <button type="button" class="button">이전 글</button>
                     <span>01</span> /
                     <span>06</span>
-                    <button type="button">다음 글</button>
+                    <button type="button" class="button">다음 글</button>
                 </div>
             </div>
-            <div role="group">
+            <div role="group" class="info-list">
                 <a href="/">
                     <strong>새소식</strong>
                     <p>'제 43회 전국장애인체육대회' 풍림무약 후원 선수 격려</p>
-                    <span></span>
+                    <span class="fa-solid fa-arrow-right"></span>
                 </a>
             </div>
         </section>

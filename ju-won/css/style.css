@@ -14,24 +14,27 @@ body{
     font-style: normal;
 
 }
-  
+
 
 header{
-    margin: 0 190px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
+    display: flow-root;
+    margin: 2.5rem 11.875rem;
 
     h1{
         width: 244px;
+        float: left;
 
         img{
             width: inherit;
         }
     }
+    div{
+        float:right;
+    }
     nav{
-            
+           
+        display: inline-block;
+
         ul{
             display: flex;
             flex-flow: row nowrap;
@@ -39,7 +42,6 @@ header{
 
             li{
                
-
                 
             }
             a{
@@ -47,6 +49,51 @@ header{
                 font-size: 1.125rem;
                 font-weight: 700;
             }
+            
+        }
+    }
+   
+}
+main{
+
+    .infomation{
+        padding: 5rem;
+
+        h2{
+            font-size: 2.875rem;
+            font-weight: 700;
+            line-height: 3.25rem;
+            margin-bottom: 2.5rem;
+        }
+        .pageing-wrap{  
+            display: none   ;
+            /* float: right; */
+        }
+        
+        .info-list{
+            padding: 1.25rem 3.75rem;
+            border:3px solid var(--black);
+            border-radius: 80px;
+
+            a{
+                width: 100%;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 1.25rem;
+                
+                strong{
+                    padding:0 7.5rem 0 1.25rem;
+                    border-right: 1px solid #ddd;
+                }
+                p{
+                    padding-left: 1.875rem;
+                    flex-grow: 2;
+                }
+                
+            }
+            
         }
     }
 }
