@@ -1,0 +1,16 @@
+.sr-only {
+  position: absolute;
+  width: 1px; /* 구형 브라우저를 위한 지원 */
+  height: 1px; /* 구형 브라우저를 위한 지원 */
+  inline-size: 1px;
+  block-size: 1px;
+  /* top: -9999px; */
+  /* inset-block-start: -9999px; */
+  overflow: hidden;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0); /* 구형 브라우저를 위한 지원 */
+  clip-path: polygon(0 0, 0 0, 0 0);
+  padding: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
