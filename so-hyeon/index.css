@@ -1,9 +1,11 @@
 @import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url(/sr-only.css);
+@import url(/default.css);
 
 :root{ 
   font-size: 6.25%;
+  font-family: "Noto Sans KR", "Montserrat",sans-serif;
 }
 
 *,*::before,*::after{
@@ -13,57 +15,66 @@
 
 a{
   text-decoration: none;  
-  color: #000;
+  color: inherit;
 }
 
 button{ 
   background: transparent;
   border: none;
-  cursor : pointer;}
+  cursor : pointer;
+}
 
-.menu-wrapper{
+/* 헤더 */
+header{
   display: flex;
-  flex-direction:row nowrap;
+  flex-flow:row nowrap;
   justify-content:space-between;
-  height: 125rem;
+  height: 127rem;
   align-items: center;
+
   .logo{
     width: 240rem;
     height: 30rem;
     padding-left: 40rem;
    }
+
+  nav{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 0 15rem;
+    
+     li{
+      display: inline-block;
+      list-style: none;
+      height: 127rem;
+      line-height: 127rem;
+      padding: 0 25rem;
+      font-size: 18rem;
+      font-weight: 700;
+    }
+
+    button{
+      padding:0 15rem;
+      height: 127rem;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
 
-.menu-group{
-  display: flex;
-  flex-direction: row nowrap;
-  align-items: center;
-  line-height: 130rem;
-  height: 130rem;
-  
-   button{
-    list-style: none;
-    padding: 56rem 25rem;
-    font-size: 18rem;
-    font-weight: 700;
-    font-family: "Noto Sans KR", sans-serif;
-  }
+/* 메인 전체 */
+.main-group{
+  height: 1167rem;
+  position: relative;}
 
-  button:nth-child(n+8){
-    padding-left: 0;
-  }
-}
-
-.main-visual-group{
-  height: 664rem;
-  position: relative;
-  
-  .main-visual-img{
+  /* 메인비주얼 영역 */
+  .visual-img-container{
     width: 100%;
-    height: 100%;
-    background-image: url(./imgs/KakaoTalk_Photo_2021-11-15-12-06-53.jpeg);
-    background-size: cover;
-    background-position: center;
+    height: 645rem;
+    background: url(./imgs/KakaoTalk_Photo_2021-11-15-12-06-53.jpeg) center/ cover;
     display: flex;
     flex-direction: column nowrap;
     text-align: center;
@@ -71,47 +82,97 @@ button{
     align-items: center;
 
     .main-content{
-      color: #fff;
-      padding-bottom: 50rem;
+      color: var(--white-color);
+      /* padding-bottom: 50rem; */
       
       .main-title{
         font-size: 72rem;
         font-weight: 700;
-        font-family: "Montserrat","Noto Sans KR", sans-serif;
+        font-family: var(--montserrat-font);
       }
       .sub-content{
         font-size: 22rem;
         font-weight: 400;
-        font-family: "Noto Sans KR", "Montserrat",sans-serif;
         line-height: 1.65;
         margin-top: 30rem;
       }
       .view-more{
-        color: #fff;
-        font-size:16rem;
+        color: var(--white-color);
+        font-size: 16rem;
         font-weight: 700;
-        font-family: "Montserrat", "Noto Sans KR", sans-serif;
+        font-family: var(--montserrat-font);
         margin-top: 68rem;
-        border-bottom: 2rem solid white;
+        border-bottom: 2rem solid var(--white-color);
         padding: 0 0 4rem;
       }
     }
-  }
-  span{
-    color: #fff;
-    font-size: 60rem;
-    opacity: 0.4;
-    font-weight: 200;
-    position: absolute;
-  }
-  .left-circle{
-    transform: rotate(180deg);
-    left: 60rem;
-  }
-  .right-circle{
-    right: 60rem;
-  }
-} 
+    /* 버튼 컴포넌트 */
+    .btnwrapper{
+      --original-color: var(--white-color);
+      font-size: 20rem;
+      border: 3rem solid var(--original-color);
+      width: 47rem;
+      height: 47rem;
+      padding: 0 1rem;
+      position: absolute;
+      top: auto;
+      opacity: 50%;
+      border-radius: 50%;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-evenly;
+      cursor: pointer;
+
+      span{
+        color: var(--original-color);
+      }
+      span.hidden{
+        display: none;
+      }
+    }
+    .btnL{
+      left: 50rem;
+    }
+    .btnR{
+      right: 50rem;
+    }
+    .btnL:hover, .btnR:hover {
+      --changed-color: var(--white-color);
+      width: 100rem;
+      border-radius: 25rem;
+      opacity: 100%;
+      border-color: var(--changed-color);
+      transition: all 0.17s;
+
+      & >span{
+        color: var(--changed-color);
+      }
+      & > .hidden{
+        display: block;
+      }
+    }
+      /* 슬라이드 스와이퍼 영역 */
+    .swiper-group{
+      width: 169rem;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      position: absolute;
+      top: 579rem;
+
+      .swiper-item{
+        width: 28rem ;
+        height: 6rem;
+        background-color: var(--white-color);
+        opacity: 50%;
+        cursor: pointer; 
+      }
+    }
+  } 
+
+/* 뉴스영역 */
+
 
 
 .main-news{
@@ -124,7 +185,7 @@ button{
     flex-flow: row nowrap;
     justify-content: space-between;
 
-    h2{
+    p{
       font-size: 48rem;
       font-weight: 700;
       line-height: 1.25;
@@ -152,7 +213,6 @@ button{
     border-radius: 100rem;
     padding-left:  80rem;
     font-size: 20rem;
-    font-family: "Noto Sans KR", "Montserrat",sans-serif;
     letter-spacing: -0.64px;
     line-height: 1.4;
     display: flex;

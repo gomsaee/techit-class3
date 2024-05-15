@@ -1,0 +1,58 @@
+button{
+  appearance: none;
+  background-color: transparent;
+}
+
+/* 양쪽버튼 공통양식 */
+.btnwrapper{
+  /* 커스텀 */
+  --original-color: black;
+  font-size: 1rem;
+  border: 0.19rem solid var(--original-color);
+  width: 3rem;
+  height: 3rem;
+  padding: 0 1rem;
+  /* 수정 X */
+  border-radius: 50%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+
+  span{
+    color: var(--original-color);
+  }
+  span.hidden{
+    display: none;
+  }
+}
+
+.btnL:hover, .btnR:hover {
+  /* 커스텀 */
+  --changed-color: blue;
+  width: 6.25rem;
+  border-radius: 1.6rem;
+  /* 수정 X */
+  border-color: var(--changed-color);
+  transition: all 0.17s;
+
+  & >span{
+    color: var(--changed-color);
+  }
+  & > .hidden{
+    display: block;
+  }
+}
+
+
+/* 슬라이드 바 */
+
+.slide-swiper{
+  /* 가로세로 1.8:1 비율 */
+  width: 1.8rem ;
+  height: 1rem;
+  background-color: red;
+  display: inline-block;
+  cursor: pointer;
+}
