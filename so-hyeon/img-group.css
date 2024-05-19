@@ -1,0 +1,53 @@
+
+.bussiness-wrapper{
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 30rem;
+}
+
+.business-item{
+  display: inline-block;
+  width: 295rem;
+  height: 340rem;
+  color: inherit;
+  text-decoration: none;
+
+.business-img{
+  margin: 0;
+  width: 295rem;
+  height: 295rem;
+  
+  img{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+h3{
+  margin-top: 30rem;
+  font-size: 20rem;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.04rem;
+  text-align: center;
+}
+}
+
+.blue-rdw{
+  margin: 0;
+  width: 295rem;
+  height: 295rem;
+  position: relative;
+}
+
+.blue-rd{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #2d5fff;
+  font-size: 42rem;
+  font-weight: 700;
+}

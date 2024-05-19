@@ -1,11 +1,21 @@
-@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url(/sr-only.css);
 @import url(/default.css);
+@import url(img-group.css);
 
 :root{ 
-  font-size: 6.25%;
+  font-size: 1px;
   font-family: "Noto Sans KR", "Montserrat",sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+  font: inherit;
+  font-size: 1em;
+  margin: 0;
+}
+
+body *, body *::before, body *::after{
+  box-sizing: border-box;
 }
 
 *,*::before,*::after{
@@ -31,6 +41,7 @@ header{
   justify-content:space-between;
   height: 127rem;
   align-items: center;
+}
 
   .logo{
     width: 240rem;
@@ -63,12 +74,13 @@ header{
       align-items: center;
     }
   }
-}
+
 
 /* 메인 전체 */
 .main-group{
   height: 1167rem;
-  position: relative;}
+  position: relative;
+}
 
   /* 메인비주얼 영역 */
   .visual-img-container{
@@ -98,7 +110,7 @@ header{
       }
       .view-more{
         color: var(--white-color);
-        font-size: 16rem;
+        font-size: 13rem;
         font-weight: 700;
         font-family: var(--montserrat-font);
         margin-top: 68rem;
@@ -106,7 +118,7 @@ header{
         padding: 0 0 4rem;
       }
     }
-    /* 버튼 컴포넌트 */
+    /* 비주얼 영역 버튼 컴포넌트 */
     .btnwrapper{
       --original-color: var(--white-color);
       font-size: 20rem;
@@ -152,7 +164,7 @@ header{
         display: block;
       }
     }
-      /* 슬라이드 스와이퍼 영역 */
+      /* 비주얼 영역 슬라이드 스와이퍼 */
     .swiper-group{
       width: 169rem;
       display: flex;
@@ -174,33 +186,31 @@ header{
 /* 뉴스영역 */
 
 
-
 .main-news{
   padding: 120rem 0 120rem;
-
-    
+}
+ 
   .move-button-container{
     margin: 0 6.5%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    position: relative;
 
     p{
       font-size: 48rem;
       font-weight: 700;
       line-height: 1.25;
-      font-family: "Noto Sans KR", "Montserrat",sans-serif;
       letter-spacing: -2px;
       }
+}
 
-    span{
+.move-button-group{
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  span{
     font-size: 22rem;
     color: #ddd;
   }
-  .move-button-group{
-    vertical-align:middle;
-  }
-}
 }
 
 .news-container{
@@ -228,24 +238,35 @@ header{
       flex-flow: row nowrap;
       align-items: center;
     }
-    .news-contents-wrapper{
-      font-weight: 400;
-      height: 100%;
-      padding-left: 40rem ;
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-
-      .news-contents{
-        width: 760rem;
-        text-align: left;
-      }
-
-      span{
-        width: 100rem;
-      }
-    }
-    
   }
- 
+}
+
+.news-contents-wrapper{
+  font-weight: 400;
+  height: 100%;
+  width: 100%;
+  padding-left: 40rem;
+  /* display: flex;
+  flex-flow: row nowrap;
+  align-items: center; */
+  position: relative;
+
+  .news-contents{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 760rem;
+    text-align: left;
+    /* flex: 1 1 auto; */
+  }
+
+  span{
+    font-size: 25rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 100rem;
+    /* flex: 1 1 auto; */
+  }
 }
