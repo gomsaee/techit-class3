@@ -2,7 +2,8 @@
 .bussiness-wrapper{
   display: grid;
   grid-template-columns: repeat(4, auto);
-  gap: 30rem;
+  grid-template-rows: auto;
+  gap: 50rem 30rem ;
 }
 
 .business-item{
@@ -26,7 +27,7 @@
 }
 
 h3{
-  margin-top: 30rem;
+  margin-top: 25rem;
   font-size: 20rem;
   line-height: 1;
   font-weight: 500;
