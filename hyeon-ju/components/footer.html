@@ -16,47 +16,48 @@
       <h2 class="footer-title">기업과 세상을 연결하는<br />풍림무약입니다</h2>
       <div class="footer-right">
         <nav class="footer-menu">
-          <ul class="footer-menu-list">
-            <li class="footer-menu-item"><a href="#">회사소개</a></li>
-            <li class="footer-menu-item"><a href="#">무역사업</a></li>
-            <li class="footer-menu-item"><a href="#">제약사업</a></li>
-            <li class="footer-menu-item"><a href="#">뉴스룸</a></li>
-            <li class="footer-menu-item"><a href="#">채용</a></li>
-            <li class="footer-menu-item"><a href="#">문의</a></li>
+          <ul class="footer-menu-list" role="tablist">
+            <li class="footer-menu-item" role="tab"><a href="#">회사소개</a></li>
+            <li class="footer-menu-item" role="tab"><a href="#">무역사업</a></li>
+            <li class="footer-menu-item" role="tab"><a href="#">제약사업</a></li>
+            <li class="footer-menu-item" role="tab"><a href="#">뉴스룸</a></li>
+            <li class="footer-menu-item" role="tab"><a href="#">채용</a></li>
+            <li class="footer-menu-item" role="tab"><a href="#">문의</a></li>
           </ul>
         </nav>
         <div class="footer-company">
           <h3>richwood</h3>
-          <button type="button" aria-label="회사정보 펼치기">
+          <button type="button" aria-label="회사정보 펼치기" aria-expanded="false">
+            <!-- button 클릭하여 펼쳐지면 aria-expanded가 true가 되도록 -->
             <span class="fa-solid fa-chevron-down" aria-hidden="true"></span>
           </button>
         </div>
-        <dl class="footer-company-info">
-          <div>
+        <dl class="footer-company-info" role="list">
+          <div role="listitem">
             <dt>대표</dt>
             <dd>이정석</dd>
           </div>
-          <div>
+          <div role="listitem">
             <dt>사업자등록번호</dt>
             <dd>104-81-02314</dd>
           </div>
-          <div>
+          <div role="listitem">
             <dt>tel</dt>
-            <dd>02-778-2351</dd>
+            <dd><a href="tel:02-778-2351">02-778-2351</a></dd>
           </div>
-          <div>
+          <div role="listitem">
             <dt>FAX</dt>
-            <dd>02-756-5402</dd>
+            <dd><a href="tel:02-756-5402">02-756-5402</a></dd>
           </div>
-          <div>
+          <div role="listitem">
             <dt class="sr-only">주소</dt>
-            <dd>04527 서울시 중구 소월로 10 남대문로5가 단암빌딩 16층</dd>
+            <dd><address>04527 서울시 중구 소월로 10 남대문로5가 단암빌딩 16층</address></dd>
           </div>
         </dl>
-        <ul class="footer-policy">
-          <li><a href="#">개인정보처리방침</a></li>
-          <li><a href="#">이메일 무단수집거부</a></li>
-          <li><a href="#">윤리경영</a></li>
+        <ul class="footer-policy" role="list">
+          <li role="listitem"><a href="#">개인정보처리방침</a></li>
+          <li role="listitem"><a href="#">이메일 무단수집거부</a></li>
+          <li role="listitem"><a href="#">윤리경영</a></li>
         </ul>
         <p class="footer-copyright">
           COPYRIGHT 2021. RICHWOOD TRADING COMPANY, LTD. ALL RIGHTS RESERVED.
